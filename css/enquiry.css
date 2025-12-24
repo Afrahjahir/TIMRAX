@@ -1,0 +1,66 @@
+
+/* Floating Button */
+.enquiry-float-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #841638;
+  color: #fff;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px 0 0 8px;
+  z-index: 99999;
+}
+
+.enquiry-slide {
+  position: fixed;
+  top: 50%;
+  right: -400px; /* hidden */
+  transform: translateY(-50%);
+  width: 360px;
+  background: #fff;
+  padding: 30px 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  transition: right 0.4s ease-in-out;
+  z-index: 100000;
+  border-radius: 12px;
+}
+
+/* Active state */
+.enquiry-slide.active {
+  right: 20px;
+}
+
+
+.enquiry-slide h4 {
+  margin-bottom: 20px;
+}
+
+.enquiry-slide input,
+.enquiry-slide textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.enquiry-slide button {
+  width: 100%;
+  background: #841638;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-enquiry {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
