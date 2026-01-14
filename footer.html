@@ -22,7 +22,7 @@
             <!-- Column 1 -->
             <div class="col-lg-4 col-12">
                <div class="footer-logo">
-                  <a href="index.html"><img src="/images/logo.png" alt="Goldium"></a>
+                  <a href="index.html"><img src="/images/timra logo new.png" alt="Timrax"></a>
                </div>
                <div class="text">
                   <p>Every garment we create reflects our commitment to precision, comfort, and long-lasting performance.</p>
@@ -69,17 +69,29 @@
                   <div class="footer-contact-details">
                      <h3 class="footer_h3">India</h3>
                      <div class="footer-info-box">
-                        <p>Sujans gears and Apparel,Nagamangalam, Trichy    </p>
-                         <p class=""><a href="tel:919363733156"></a>+91-9363733156 </p>
-                        <p class="mb-3"><a href="mailto:timraxind@gmail.com">timraxind@gmail.com</a></p>
+                       <p class="mb-2"> <i class="fa-solid fa-location-dot"></i> Sujans Gears and Apparel, Nagamangalam, Trichy</p>
+                       <p class="mb-2"><i class="fa-solid fa-phone"></i> <a href="tel:+919363733156"> +91-9363733156</a></p>
+                       <div class="contact-icons">
+                         <ul class="contact-icon-list">
+                           <li><a href="mailto:timraxind@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                           <li> <a href="https://api.whatsapp.com/send/?phone=9363733156&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                       </div>
+
                      </div>
                   </div>
                   <div class="footer-contact-details">
                      <h3 class="footer_h3">Denmark</h3>
                      <div class="footer-info-box">
-                        <p>P&S Group ApS, 3650 Ølstykke</p>
-                        <p class=""><a href="tel:04591950840"></a>04591950840 </p>
-                        <p class="mb-0"><a href="mailto:timraxdk@gmail.com">timraxdk@gmail.com</a></p>
+                        <p class="mb-2"><i class="fa-solid fa-location-dot"></i> P&S Group ApS, 3650 Ølstykke</p>
+                        <p class="mb-2"><i class="fa-solid fa-phone"></i> <a href="tel:04591950840"></a> 04591950840 </p>
+                        <!-- <p class="mb-0"><a href="mailto:timraxdk@gmail.com">timraxdk@gmail.com</a></p> -->
+                      <div class="contact-icons">
+                         <ul class="contact-icon-list">
+                           <li><a href="mailto:timraxdk@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                           <li> <a href="https://api.whatsapp.com/send/?phone=04591950840&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                       </div>
                      </div>
                   </div>
                   
@@ -114,5 +126,37 @@
    h3.footer_h3 {
     font-size: 18px;
     margin-bottom: 10px;
+}
+.contact-icon-list{
+   list-style:none;
+   padding:0;
+   margin-bottom:20px;
+   display:flex;
+   gap:15px;
+}
+
+.contact-icon-list li a {
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s;
+}
+.icon-email:hover{
+   color:#0a7cff;
+}
+
+.icon-whatsapp:hover{
+   color:#25D366;
+}
+@media screen and (max-width:768px) {
+.contact-icon-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    align-content: space-between;
+    justify-content: center;
+}
 }
 </style>

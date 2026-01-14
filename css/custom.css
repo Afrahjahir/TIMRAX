@@ -290,11 +290,12 @@ body {
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 	background: transparent;
-	color: var(--primary-color);
+	color: #fff;
+	background: #c91619;
 	border-radius: 0px;
 	padding: 16px 28px 16px 28px;
 	font-family: var(--default-font);
-	border: 1px solid var(--primary-color) !important;
+	/* border: 1px solid var(--primary-color) !important; */
 	z-index: 1;
 	transition: all 0.5s ease-in-out;
 	overflow: hidden;
@@ -522,7 +523,7 @@ body {
 }
 
 .section-title .sisf-m-subtitle {
-	color: var(--text-color);
+	color: #dc3545;
 	font-size: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -542,7 +543,7 @@ body {
 }
 
 .section-title h1 {
-	font-size: 80px;
+	font-size: 55px;
 	font-weight: 700;
 	line-height: 85px;
 	text-transform: none;
@@ -560,6 +561,7 @@ body {
 	text-transform: uppercase;
 	position: relative;
 	z-index: 1;
+	
 }
 
 .section-title .sisf-m-title i {
@@ -1015,8 +1017,8 @@ header.main-header .header-sticky.active {
 }
 
 .sisf-header-logo-link.navbar-brand img {
-	width: 125px;
-	height: 65px;
+	height: 100px;
+	width: 233px;
 	margin-top: -68px;
 	top: 30px;
 }
@@ -1950,7 +1952,7 @@ header.main-header .header-sticky.active {
 }
 
 .hero.hero-slider {
-	background: none;
+	/* background: none; */
 	padding: 0;
 }
 
@@ -2106,19 +2108,20 @@ header.main-header .header-sticky.active {
 	text-align: center;
 }
 
-.hero-content .btn-slider {
+.btn-slider {
 	background: transparent;
 	line-height: 30px;
 	letter-spacing: 0.8px;
 	font-family: var(--default-font);
-	border: 1px solid var(--primary-color);
+	/* border: 1px solid var(--primary-color); */
 	font-weight: 500;
 	padding: 15px 30px;
 	font-size: 16px;
 	margin-right: 20px;
 	border-radius: 0px;
-	color: var(--primary-color);
+	color: #fff;
 	text-transform: uppercase;
+	background: #c91619;
 	transition: all ease 0.5s;
 }
 
@@ -7073,6 +7076,7 @@ select {
 	background-color: var(--white-color);
 	padding: 20px;
 	width: 90%;
+	height: 422px;
 	margin: 0 auto;
 	margin-top: -90px;
 	position: relative;
@@ -7924,8 +7928,8 @@ select {
 .sisf-page-footer-middle-area {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	border-top: 1px solid #e7e7e7;
-	border-bottom: 1px solid #e7e7e7;
+	border-top: 1px solid #f8f6f4;
+	border-bottom: 1px solid #b82e26;
 	background-color: var(--white-color);
 }
 
@@ -9535,6 +9539,7 @@ select {
 
 	.section-title h1 {
 		font-size: 28px;
+		margin-top: 23px;
 		line-height: 45px;
 	}
 
@@ -10612,7 +10617,7 @@ select {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #000;
+  background: #c91619;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -10692,6 +10697,9 @@ margin-bottom: 25px;
 }
 .hero-content-inner.wow.fadeInRight{
 	margin-top: 0px;
+}
+.sisf-blog-item.sisf-item-layout-boxed .sisf-e-content {
+    height: auto;
 }
 }
 .section234{

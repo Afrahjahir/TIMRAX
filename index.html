@@ -76,7 +76,7 @@ fetch("header.html")
                   <!-- Left Side: Image -->
                   <div class="col-md-6 p-0 d-none d-md-block">
                      <figure>
-                        <img src="images/discover_your_img--2.png" alt="Goldium">
+                        <img src="/images/curved image resized 2.png" alt="Goldium">
                      </figure>
                   </div>
                   <!-- Right Side: Form -->
@@ -94,7 +94,8 @@ fetch("header.html")
                            <input type="email" class="form-control rounded-0" placeholder="Enter your email address" id="emailInput">
                         </div>
                         <div class="mb-3">
-                           <button class="btn-default w-100">Subscribe</button>
+                       <button class="btn-default w-100" id="subscribeBtn">Subscribe</button>
+
                         </div>
                         <div class="form-check">
                            <input class="form-check-input rounded-0 shadow-none" type="checkbox" id="dontShowAgain">
@@ -108,74 +109,154 @@ fetch("header.html")
             </div>
          </div>
       </div>
+      <script>
+document.getElementById("subscribeBtn").addEventListener("click", function() {
+    const email = document.getElementById("emailInput").value.trim();
+    
+    if(email === "") {
+        alert("timraxind@gmail.com");
+        return;
+    }
+    
+    // For now, just show an alert — no server needed
+    alert("Thank you for subscribing!\nEmail: " + email);
+
+    // Optional: clear the input
+    document.getElementById("emailInput").value = "";
+
+    // Close modal automatically (Bootstrap 5)
+    var newsletterModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
+    newsletterModal.hide();
+});
+</script>
+
  <div id="site-header"></div>
 
-      <!-- Hero Banner Start --> 
-      <div class="hero hero-slider home2 position-relative">
-         <div class="hero-slider-layout">
-            <div class="swiper">
-               <div class="swiper-wrapper">
-                  <!-- Hero Slide Start -->
-                  <div class="swiper-slide">
-                     <div class="hero-slides">
-                        <!-- Slider Content Start -->
-                        <div class="container-fluid">
-                           <div class="row align-items-center">
-                              <div class="col-md-6 col-12">
-                                 <!-- Hero Content Start -->
-                                 <div class="hero-content">
-                                    <!-- Hero Title Start -->
-                                    <div class="section-title wow fadeInLeft">
-                                       <!-- <h3 class="sisf-m-subtitle text-start mb-3">NATURE'S TREASURES</h3> -->
-                                       <h1 class="text-anime-style-2  text-start text-heading" data-cursor="-opaque">Crafting Apparel That Defines Professional Identity</h1>
-                                       <p class="text-start" >28+ Years of Expertise in Premium Apparel & Uniform Solutions</p>
-                                       <p class="text-start" style="margin-top:0px">Custom Designs • Premium Fabrics • Tailored Fits</p>
-                                    </div>
-                                    <!-- Hero Title End -->
-                                    <!-- Hero Content Body Start -->
-                                    <div class="sisf-m-button hero-content-body text-start wow fadeInUp">
-                                       <a href="shop-standard-list.html" class="btn-slider"><span>Explore Our Collections</span>
-                                       </a>
-                                          <a href="shop-standard-list.html" class="btn-slider marka_btn"><span class="marka_btn">Request a Quote</span>
-                                       </a>
-                                    </div>
-                                    <!-- Hero Content Body End -->
-                                  
-                                 </div>
-                                 <!-- Hero Content End -->
-                              </div>
-                              <div class="col-md-3 col-12">
-                                 <div class="header-image header--image wow fadeInRight">
-                                    <figure>
-                                       <img src="images/home2_hero_img8.png" alt="goldium">
-                                    </figure>
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-12">
-                                 <div class="header-image header--image wow fadeInRight">
-                                    <figure>
-                                       <img src="images/home2_hero_img5.png" alt="goldium">
-                                    </figure>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Slider Content End -->
-                     </div>
-                  </div>
-                  
-                     </div>
-                  </div>
-                  <!-- Hero Slide End -->
+<!-- Hero Banner Start -->
+<div class="timrax-hero">
+   <div class="timrax-hero-overlay"></div>
+
+   <div class="container-fluid">
+      <div class="row align-items-center timrax-hero-row">
+         <div class="col-lg-7 col-md-8 col-12">
+            <div class="timrax-hero-content" style="margin-left: 40px;">
+               <div class="section-title wow fadeInLeft">
+                  <h1 class="timrax-hero-title" >
+                     Crafting Apparel That <br> Defines Professional Identity
+                  </h1>
+                  <p class="timrax-hero-text">28+ Years of Expertise in Premium Apparel & Uniform Solutions</p>
+                  <p class="timrax-hero-text">Custom Designs • Premium Fabrics • Tailored Fits</p>
                </div>
-               <div class="hero-pagination swiper-pagination d-flex justify-content-center"></div>
-               <!-- Navigation Buttons -->
-               <div class="swiper-button-prev"></div>
-               <div class="swiper-button-next"></div>
+
+               <div class="sisf-m-button wow fadeInUp">
+                  <a href="products.html" class="btn-slider">
+                     <span>Explore Our Collections</span>
+                  </a>
+                  <a href="contact.html" class="btn-slider marka_btn">
+                     <span>Request a Quote</span>
+                  </a>
+               </div>
             </div>
          </div>
       </div>
-      <!-- Hero Banner End -->
+   </div>
+</div>
+<!-- Hero Banner End -->
+
+<style>
+/* Main Hero Background */
+.timrax-hero{
+    background: url("images/2nd\ white\ banners\ \(3\).png"); /* change image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    margin-top: 110px;   /* height of your header */
+}
+.timrax-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:rgb(0 0 0 / 15%);
+    z-index: 1;
+}
+
+
+
+/* Keep content above overlay */
+.timrax-hero .container-fluid{
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero height */
+.timrax-hero-row{
+    min-height: 90vh;
+}
+
+
+.timrax-hero-text{
+       color: #232626;
+
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Mobile responsive */
+@media(max-width: 768px){
+    .timrax-hero-row{
+        min-height: 70vh;
+        text-align: center;
+    }
+    /* Dark overlay */
+.timrax-hero-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+.timrax-hero {
+    background: url("images/2nd\ white\ banners\ \(3\).png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    /* padding-top: 16px; */
+     margin-top: 10px; 
+}
+    .timrax-hero-title{
+        font-size: 28px;
+    }
+
+    .timrax-hero-text{
+        font-size: 15px;
+    }
+
+    .sisf-m-button{
+        margin-bottom: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .timrax-hero-text {
+    color:#f2f2f2;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+/* Text styling */
+.timrax-hero-title{
+    color:#fff;
+    font-size: 52px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+}
+
+
+</style>
+
          <!-- Our Story Section Start -->
       <div class="our-story section">
          <div class="container">
@@ -183,8 +264,8 @@ fetch("header.html")
                <div class="col-md-6">
                   <!-- Section-title Start -->
                   <div class="sisf-sis-section-title section-title mb-0 wow fadeInLeft">
-                     <h3 class="sisf-m-subtitle">ABOUT TIMRAX</h3>
-                     <h2 class="sisf-m-title mb-0">A Legacy of Quality & Craftsmanship</h2>
+                     <!-- <h3 class="">ABOUT TIMRAX</h3> -->
+                     <h2 class="sisf-m-title mb-0">A Legacy of <span style="color:#c91619"> Quality & Craftsmanship</span></h2>
                      <div class="sisf-m-text pb-4">
                         <p>For over 28 years, TIMRAX has evolved from a small workshop into a trusted international apparel manufacturer.  we Serve schools, healthcare, corporate, hospitality, and sports industries, we deliver custom-made clothing that helps teams look professional and feel confident—every day.</p>
                         <p>Every garment we create reflects our commitment to precision, comfort, and long-lasting performance.</p>
@@ -196,14 +277,14 @@ fetch("header.html")
                <div class="col-md-3">
                   <div class="your-destination-image wow fadeInRight">
                      <figure>
-                        <img src="images/your_destination_img1.png" class="animate-hover" alt="Goldium">
+                        <img src="images/fashion lady.png" class="animate-hover" alt="Goldium">
                      </figure>
                   </div>
                </div>
                <div class="col-md-3">
                   <div class="your-destination-image wow fadeInRight marka_aboutimage">
                      <figure>
-                        <img src="images/your_destination_img2.png" class="animate-hover" alt="Goldium">
+                        <img src="images/school.png" class="animate-hover" alt="Goldium">
                      </figure>
                   </div>
                </div>
@@ -238,7 +319,7 @@ fetch("header.html")
                                  <div class="sisf-product-inner sisf-e-inner">
                                     <!-- Product Image Start -->
                                     <div class="sisf-product-image">
-                                       <a href="#">
+                                       <a href="javascript:void(0)">
                                           <figure>
                                              <img src="images/product-7.png" class="image-fluid" alt="Goldium">
                                           </figure>
@@ -250,7 +331,7 @@ fetch("header.html")
                                     <div class="sisf-e-product-content">
                                      
                                        <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="#">School Uniforms</a>
+                                          <a class="sisf-e-product-title-link shop-product" href="">School Uniforms</a>
                                        </h3>
                                      
                                     </div>
@@ -265,82 +346,7 @@ fetch("header.html")
                                  <div class="sisf-product-inner sisf-e-inner">
                                     <!-- Product Image Start -->
                                     <div class="sisf-product-image">
-                                       <a href="shop-single.html">
-                                          <figure>
-                                             <img src="images/product-16.png" class="image-fluid" alt="Goldium">
-                                          </figure>
-                                       </a>
-                                       
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="sisf-e-product-content">
-                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="#">Hospitals & Healthcare Apparel</a>
-                                       </h3>
-                                    </div>
-                                    <!-- Product Content End -->
-                                 </div>
-                              </div>
-                              <!-- Product Category List End -->
-                           </div>
-                           <div class="swiper-slide">
-                              <!-- Product Category List Start -->
-                              <div class="product-category-list-item">
-                                 <div class="sisf-product-inner sisf-e-inner">
-                                    <!-- Product Image Start -->
-                                    <div class="sisf-product-image">
-                                       <a href="shop-single.html">
-                                          <figure>
-                                             <img src="images/product-17.png" class="image-fluid" alt="Goldium">
-                                          </figure>
-                                       </a>
-                                     </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="sisf-e-product-content">
-                                      
-                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="#">Corporate Office Wear</a>
-                                       </h3>
-                                    </div>
-                                    <!-- Product Content End -->
-                                 </div>
-                              </div>
-                              <!-- Product Category List End -->
-                           </div>
-                           <div class="swiper-slide">
-                              <!-- Product Category List Start -->
-                              <div class="product-category-list-item">
-                                 <div class="sisf-product-inner sisf-e-inner">
-                                    <!-- Product Image Start -->
-                                    <div class="sisf-product-image">
-                                       <a href="shop-single.html">
-                                          <figure>
-                                             <img src="images/product-18.png" class="image-fluid" alt="Goldium">
-                                          </figure>
-                                       </a>
-                                     
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="sisf-e-product-content">
-                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="shop-single.html">Hospitality Uniforms</a>
-                                       </h3>
-                                    </div>
-                                    <!-- Product Content End -->
-                                 </div>
-                              </div>
-                              <!-- Product Category List End -->
-                           </div>
-                           <div class="swiper-slide">
-                              <!-- Product Category List Start -->
-                              <div class="product-category-list-item">
-                                 <div class="sisf-product-inner sisf-e-inner">
-                                    <!-- Product Image Start -->
-                                    <div class="sisf-product-image">
-                                       <a href="shop-single.html">
+                                       <a href="javascript:void(0)">
                                           <figure>
                                              <img src="images/product-19.png" class="image-fluid" alt="Goldium">
                                           </figure>
@@ -351,7 +357,7 @@ fetch("header.html")
                                         <!-- Product Content Start -->
                                     <div class="sisf-e-product-content">
                                        <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="shop-single.html">Sportswear & Athletic Apparel</a>
+                                          <a class="sisf-e-product-title-link shop-product" href="javascript:void(0)">Sports Wears</a>
                                        </h3>
                                     </div>
                                     <!-- Product Content End -->
@@ -360,17 +366,118 @@ fetch("header.html")
                               </div>
                               <!-- Product Category List End -->
                            </div>
+                           <div class="swiper-slide">
+                              <!-- Product Category List Start -->
+                              <div class="product-category-list-item">
+                                 <div class="sisf-product-inner sisf-e-inner">
+                                    <!-- Product Image Start -->
+                                    <div class="sisf-product-image">
+                                       <a href="javascript:void(0)">
+                                          <figure>
+                                             <img src="images/hospital.png" class="image-fluid" alt="Goldium">
+                                          </figure>
+                                       </a>
+                                       
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="sisf-e-product-content">
+                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
+                                          <a class="sisf-e-product-title-link shop-product" href="javascript:void(0)">Hospitals & Healthcare Apparel</a>
+                                       </h3>
+                                    </div>
+                                    <!-- Product Content End -->
+                                 </div>
+                              </div>
+                              <!-- Product Category List End -->
+                           </div>
+                           <div class="swiper-slide">
+                              <!-- Product Category List Start -->
+                              <div class="product-category-list-item">
+                                 <div class="sisf-product-inner sisf-e-inner">
+                                    <!-- Product Image Start -->
+                                    <div class="sisf-product-image">
+                                       <a href="javascript:void(0)">
+                                          <figure>
+                                             <img src="images/corp.webp" class="image-fluid" alt="Goldium">
+                                          </figure>
+                                       </a>
+                                     </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="sisf-e-product-content">
+                                      
+                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
+                                          <a class="sisf-e-product-title-link shop-product" href="javascript:void(0)">Corporate Office Wear</a>
+                                       </h3>
+                                    </div>
+                                    <!-- Product Content End -->
+                                 </div>
+                              </div>
+                              <!-- Product Category List End -->
+                           </div>
                            
+                           <div class="swiper-slide">
+                              <!-- Product Category List Start -->
+                              <div class="product-category-list-item">
+                                 <div class="sisf-product-inner sisf-e-inner">
+                                    <!-- Product Image Start -->
+                                    <div class="sisf-product-image">
+                                       <a href="javascript:void(0)">
+                                          <figure>
+                                             <img src="images/Industry.png" class="image-fluid" alt="Goldium">
+                                          </figure>
+                                       </a>
+                                    
+                                    </div>
+                                    <!-- Product Image End -->
+                                        <!-- Product Content Start -->
+                                    <div class="sisf-e-product-content">
+                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
+                                          <a class="sisf-e-product-title-link shop-product" href="javascript:void(0)">Industries Wears</a>
+                                       </h3>
+                                    </div>
+                                    <!-- Product Content End -->
+                             
+                                 </div>
+                              </div>
+                              <!-- Product Category List End -->
+                           </div>
+                           <div class="swiper-slide">
+                              <!-- Product Category List Start -->
+                              <div class="product-category-list-item">
+                                 <div class="sisf-product-inner sisf-e-inner">
+                                    <!-- Product Image Start -->
+                                    <div class="sisf-product-image">
+                                       <a href="javascript:void(0)">
+                                          <figure>
+                                             <img src="images/product-17.png" class="image-fluid" alt="Goldium">
+                                          </figure>
+                                       </a>
+                                     
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="sisf-e-product-content">
+                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
+                                          <a class="sisf-e-product-title-link shop-product" href="javascript:void(0)">Hospitality Uniforms</a>
+                                       </h3>
+                                    </div>
+                                    <!-- Product Content End -->
+                                 </div>
+                              </div>
+                              <!-- Product Category List End -->
+                           </div>
                         </div>
  <!-- IMAGE ARROWS -->
-            <div class="newly-added-nav">
+            <!-- <div class="newly-added-nav">
   <div class="newly-added-prev">
     <img src="images/arrow-left.png" alt="Prev">
   </div>
   <div class="newly-added-next">
     <img src="images/arrow-right.png" alt="Next">
   </div>
-</div>
+</div> -->
 
                      </div>
                   </div>
@@ -425,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function () {
                <div class="col-md-5">
                   <!-- Section-Title Start -->
                   <div class="sisf-sis-section-title mb-0 section-title wow fadeInLeft">
-                           <h2 class="sisf-m-title text-capitalize">WHY CHOOSE TIMRAX</h2>
+                           <h2 class="sisf-m-title text-capitalize">WHY CHOOSE <span style="color:#c91619"> TIMRAX </span></h2>
                      <div class="sisf-m-text">
                         <p style="text-align: justify;">We offer premium fabric selection combined with expert tailoring and durable stitching to ensure long-lasting quality and comfort. Our services include custom branding with precise logo embroidery, along with tailored sizing and color customization to perfectly match your brand identity. Backed by industry-specific design expertise, we deliver uniforms that are both functional and professional, supported by reliable delivery timelines and scalable production capabilities to meet businesses of any size.</p>
                      </div>
@@ -436,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function () {
                <div class="col-md-4">
                   <div class="discover-img wow zoomIn">
                      <figure>
-                        <img src="images/discover_your_img-2.png" alt="Goldium">
+                        <img src="images/tailoring 3.png" alt="Goldium">
                      </figure>
                   </div>
                </div>
@@ -450,13 +557,13 @@ document.addEventListener("DOMContentLoaded", function () {
                                  <div class="sisf-product-inner sisf-e-inner">
                                     <!-- Product Image Start -->
                                     <div class="sisf-product-image">
-                                       <a href="shop-single.html">
+                                       <a href="javascript:void(0)">
                                           <figure>
-                                             <img src="/images/product-19.png" class="image-fluid" alt="Goldium">
+                                             <img src="/images/cloth matrials (2).png" class="image-fluid" alt="Goldium">
                                           </figure>
                                        </a>
                                        <!-- <div class="sisf-m-button text-center">
-                                          <a href="shop-single.html" class="product_type_simple btn-default sisf-layout-filled"> 
+                                          <a href="javascript:void(0)" class="product_type_simple btn-default sisf-layout-filled"> 
                                           <span> View More</span>
                                           </a>
                                        </div> -->
@@ -466,70 +573,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <div class="sisf-e-product-content">
                                        
                                        <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="shop-single.html">SportsWear</a>
+                                          <a class="sisf-e-product-title-link shop-product" href="javascript:void(0)"></a>
                                        </h3>
                                      
-                                    </div>
-                                    <!-- Product Content End -->
-                                 </div>
-                              </div>
-                              <!-- Product Category List End -->
-                           </div>
-                           <div class="swiper-slide">
-                              <!-- Product Category List Start -->
-                              <div class="product-category-list-item">
-                                 <div class="sisf-product-inner sisf-e-inner">
-                                    <!-- Product Image Start -->
-                                    <div class="sisf-product-image">
-                                       <a href="shop-single.html">
-                                          <figure>
-                                             <img src="images/product-18.png" class="image-fluid" alt="Goldium">
-                                          </figure>
-                                       </a>
-                                     
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="sisf-e-product-content">
-                                       <!-- <div class="sisf-product-categories sisf-e-info mt-3 mb-1">
-                                          <a href="shop.html">Necklaces</a>
-                                          <span class="sisf-info-separator-single">,</span>
-                                          <a href="shop.html">Pendent</a>
-                                       </div> -->
-                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="shop-single.html">Hospitality Uniforms</a>
-                                       </h3>
-                                       <!-- <div class="sisf-product-price price mt-2">
-                                          <span class="product-price-amount">$100.00</span>
-                                       </div> -->
-                                    </div>
-                                    <!-- Product Content End -->
-                                 </div>
-                              </div>
-                              <!-- Product Category List End -->
-                           </div>
-                         
-                           <div class="swiper-slide">
-                              <!-- Product Category List Start -->
-                              <div class="product-category-list-item">
-                                 <div class="sisf-product-inner sisf-e-inner">
-                                    <!-- Product Image Start -->
-                                    <div class="sisf-product-image">
-                                       <a href="shop-single.html">
-                                          <figure>
-                                             <img src="images/product-16.png" class="image-fluid" alt="Goldium">
-                                          </figure>
-                                       </a>
-                                    
-                                    </div>
-                                    <!-- Product Image End -->
-                                    <!-- Product Content Start -->
-                                    <div class="sisf-e-product-content">
-                                      
-                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="shop-single.html">Hospitals & Healthcare Apparel</a>
-                                       </h3>
-                                      
                                     </div>
                                     <!-- Product Content End -->
                                  </div>
@@ -537,68 +583,6 @@ document.addEventListener("DOMContentLoaded", function () {
                               <!-- Product Category List End -->
                            </div>
                            
-                           <div class="swiper-slide">
-                              <!-- Product Category List Start -->
-                              <div class="product-category-list-item">
-                                 <div class="sisf-product-inner sisf-e-inner">
-                                    <!-- Product Image Start -->
-                                    <div class="sisf-product-image">
-                                       <a href="shop-single.html">
-                                          <figure>
-                                             <img src="images/product-17.png" class="image-fluid" alt="Goldium">
-                                          </figure>
-                                       </a>
-                                      
-                                    </div>
-                                    <!-- Product Image End -->
-                                     <!-- Product Content Start -->
-                                    <div class="sisf-e-product-content">
-                                       <!-- <div class="sisf-product-categories sisf-e-info mt-3 mb-1">
-                                          <a href="shop.html">Earrings</a>
-                                       </div> -->
-                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="shop-single.html">Corporate Office Wear</a>
-                                       </h3>
-                                       <!-- <div class="sisf-product-price price mt-2">
-                                          <span class="product-price-amount">$149.00</span>
-                                       </div> -->
-                                    </div>
-                                    <!-- Product Content End -->
-                                 </div>
-                              </div>
-                              <!-- Product Category List End -->
-                           </div>
-                           <div class="swiper-slide">
-                              <!-- Product Category List Start -->
-                              <div class="product-category-list-item">
-                                 <div class="sisf-product-inner sisf-e-inner">
-                                    <!-- Product Image Start -->
-                                    <div class="sisf-product-image">
-                                       <a href="shop-single.html">
-                                          <figure>
-                                             <img src="images/product-7.png" class="image-fluid" alt="Goldium">
-                                          </figure>
-                                       </a>
-                                      
-                                    </div>
-                                    <!-- Product Image End -->
-                                     <!-- Product Content Start -->
-                                    <div class="sisf-e-product-content">
-                                       <!-- <div class="sisf-product-categories sisf-e-info mt-3 mb-1">
-                                          <a href="shop.html">Earrings</a>
-                                       </div> -->
-                                       <h3 class="sisf-e-product-title sisf-e-title entry-title">
-                                          <a class="sisf-e-product-title-link shop-product" href="#">School Uniform</a>
-                                       </h3>
-                                       <!-- <div class="sisf-product-price price mt-2">
-                                          <span class="product-price-amount">$149.00</span>
-                                       </div> -->
-                                    </div>
-                                    <!-- Product Content End -->
-                                 </div>
-                              </div>
-                              <!-- Product Category List End -->
-                           </div>
                         
                            
                         </div>
@@ -621,18 +605,18 @@ document.addEventListener("DOMContentLoaded", function () {
                <div class="col-md-6">
                   <div class="offer-image position-relative wow fadeInLeft">
                      <figure>
-                        <img src="images/offer_img1.png" alt="Goldium">
+                        <img src="/images/home below3.png" >
                      </figure>
                      <div class="offers-content">
                         <div class="sisf-m-content text-center">
                            <h3 class="sisf-m-title mb-3">
-                              <a href="shop-standard-list.html" class=" text-white text-uppercase">CUSTOMIZATION & BRANDING</a>
+                              <a href="javascript:void(0)" class=" text-white text-uppercase">CUSTOMIZATION & BRANDING</a>
                            </h3>
                            <p class="sisf-m-text text-white">We provide complete customization with logo embroidery or printing, custom colors, tailored fits, and role-specific designs—ensuring your apparel truly represents your brand.</p>
                         </div>
                        
                         <div class="sisf-m-button text-center">
-                           <a href="shop-standard-list.html" class="btn-default btn-secondary">SHOP NOW</a>
+                           <a href="javascript:void(0)" class="btn-default btn-secondary">SHOP NOW</a>
                         </div>
                      </div>
                   </div>
@@ -640,17 +624,17 @@ document.addEventListener("DOMContentLoaded", function () {
                <div class="col-md-6">
                   <div class="offer-image position-relative wow fadeInLeft">
                      <figure>
-                       <img src="images/offer_img2.webp" alt="Goldium">
+                       <img src="/images/homebelo4.png" alt="Goldium">
                      </figure>
                      <div class="offers-content">
                         <div class="sisf-m-content text-center">
                            <h3 class="sisf-m-title mb-3">
-                              <a href="shop-standard-list.html" class=" text-white text-uppercase">GLOBAL TRUST</a>
+                              <a href="javascript:void(0)" class=" text-white text-uppercase">GLOBAL TRUST</a>
                            </h3>
                            <p class="sisf-m-text text-white">With decades of experience and global reach, TIMRAX delivers trusted quality worldwide through reliable partnerships and superior craftsmanship.</p>
                         </div>
                         <div class="sisf-m-button text-center">
-                           <a href="shop-standard-list.html" class="btn-default btn-secondary">SHOP NOW</a>
+                           <a href="javascript:void(0)" class="btn-default btn-secondary">SHOP NOW</a>
                         </div>
                      </div>
                   </div>
@@ -663,12 +647,12 @@ document.addEventListener("DOMContentLoaded", function () {
                      <div class="offers-content">
                         <div class="sisf-m-content text-center">
                            <h3 class="sisf-m-title mb-3">
-                              <a href="shop-standard-list.html" class=" text-white text-uppercase">Sale! Up to 50% OFF</a>
+                              <a href="javascript:void(0)" class=" text-white text-uppercase">Sale! Up to 50% OFF</a>
                            </h3>
                            <p class="sisf-m-text text-white">For selected products only now</p>
                         </div>
                         <div class="sisf-m-button text-center">
-                           <a href="shop-standard-list.html" class="btn-default btn-secondary">SHOP NOW</a>
+                           <a href="javascript:void(0)" class="btn-default btn-secondary">SHOP NOW</a>
                         </div>
                      </div>
                   </div>
@@ -689,7 +673,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <!-- Section-Title Start -->
                   <div class="sisf-sis-section-title section-title mb-0 wow fadeInLeft">
                      <h3 class="sisf-m-subtitle text-white">LET’S CREATE YOUR APPAREL</h3>
-                     <h2 class="sisf-m-title text-white">Partner With TIMRAX</h2>
+                     <h2 class="sisf-m-title text-white">Partner With <span style="color:#c91619"> TIMRAX </span></h2>
                      <p style="color: #f8f6f4;">
                         Looking for custom uniforms or professional apparel solutions?<br>
                         Our team is ready to support your requirements—from concept to completion.
@@ -747,7 +731,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="sisf-m-filter-items ">
                            <!-- Section-Title Start -->
                            <div class="sisf-sis-section-title section-title mb-4 wow fadeInRight">
-                              <h2 class="sisf-m-title marka_title">28+ Years of Confidence, Quality & Commitment</h2>
+                              <h2 class="sisf-m-title marka_title">28+ Years of Confidence, <span style="color:#c91619"> Quality & Commitment </span></h2>
                               <p>At TIMRAX, every stitch represents our dedication to excellence. From schools and hospitals to corporate offices and sports arenas, we create apparel that supports performance, professionalism, and pride.</p>
                            </div>
                            <!-- Section-Title End -->
@@ -771,7 +755,13 @@ fetch('../footer.html')
 <div id="site-footer"></div>
        <!-- Floating Enquiry Button -->
 <div class="enquiry-float-btn" id="enquiryBtn">
-  Enquiry
+E<br>
+N<br>
+Q<br>
+U<br>
+I<br>
+R<br>
+Y
 </div>
 
 <!-- Slide Enquiry Form -->
@@ -780,7 +770,7 @@ fetch('../footer.html')
 
   <h4>Quick Enquiry</h4>
 
-  <form action="enquiry-submit.php" method="POST">
+  <form action="/contact.php" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
     <input type="email" name="email" placeholder="Email">
@@ -825,5 +815,81 @@ fetch('../footer.html')
         <script src="js/enquiry.js"></script>
       <!-- Main Custom js file -->
       <script src="js/function.js"></script>
-   </body>
+   <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
 </html>
