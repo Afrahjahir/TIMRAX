@@ -2640,11 +2640,13 @@ header.main-header .header-sticky.active {
 	font-family: var(--default-font);
 	color: var(--primary-color);
 	text-transform: none;
+	text-align:center;
 	margin-top: 20px;
 }
 
 .product-category-list-item .sisf-e-product-title a {
 	color: var(--primary-color);
+	text-align: center;
 }
 
 .product-category-list-item .sisf-product-categories a {
