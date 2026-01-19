@@ -63,7 +63,7 @@ fetch("header.html")
          <div class="sisf-page-title sisf-m sisf-title--standard sisf-alignment--center">
             <div class="sisf-m-inner">
                <div class="sisf-m-content sisf-content-grid ">
-                  <h1 class="sisf-m-title entry-title">About Us</h1>
+                  <h1 class="sisf-m-title entry-title">Shop</h1>
                </div>
             </div>
          </div>
@@ -72,38 +72,137 @@ fetch("header.html")
 <!-- ===== FULL LAYOUT WITH UNIFORM SECTION PADDING ===== -->
 
 <!-- ===== FULL IMAGE SECTION ===== -->
-<section class="full-image-section"> <div class="container"> <!-- ===== TITLE ===== --> <div class="section-title"> <h2>School Uniforms</h2> </div> <div class="image-grid"> <div class="img img-1"> <img src="https://picsum.photos/800/900?1"> </div> <div class="img img-2"> <img src="https://picsum.photos/600/400?2"> </div> <div class="img img-3"> <img src="https://picsum.photos/600/400?3"> </div> <div class="img img-4"> <img src="https://picsum.photos/1200/500?4"> </div> <!-- <div class="img img-5"> <img src="https://picsum.photos/800/400?5"> </div> --> </div> </div> </section> <style> .full-image-section { padding: 80px 0 10px; } .section-title { text-align: center; margin-bottom: 50px; } .section-title h2 { font-size: 42px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; } .section-title p { font-size: 16px; color: #666; } .container {width: 95%;margin: auto;} /* GRID */ .image-grid {display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: 158px 290px;gap: 22px;grid-template-areas:
-"img1 img2 img3"
-"img1 img4 img4"
-"img5 img5 img5";} /* Assign areas */ .img-1 { grid-area: img1; } .img-2 { grid-area: img2; } .img-3 { grid-area: img3; } .img-4 { grid-area: img4; } <!-- .img-5 { grid-area: img5; } --> /* Image styling */ .image-grid .img { border-radius: 12px; overflow: hidden; } .image-grid img { width: 100%; height: 100%; object-fit: cover; display: block; } /* Responsive */ @media (max-width: 900px) { .image-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-template-areas: none; } .image-grid .img { height: 220px; } } </style> <!------------------>
+<!-- ===== SCHOOL UNIFORM SECTION ===== -->
+<section class="full-image-section">
+  <div class="container">
+
+    <!-- ===== TITLE ===== -->
+    <div class="section-title">
+      <h2>School Uniforms</h2>
+    </div>
+
+    <!-- ===== IMAGE GRID ===== -->
+    <div class="image-grid school-grid">
+
+      <div class="img img-1">
+        <img src="/images/shop/Schooluniform4.png" alt="">
+      </div>
+
+      <div class="img img-2">
+        <img src="/images/shop/Schooluniform2.png" alt="">
+      </div>
+
+      <div class="img img-3">
+        <img src="/images/shop/Schooluniform3.png" alt="">
+      </div>
+
+      <div class="img img-4">
+        <img src="/images/shop/Schooluniform1.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== STYLES ===== -->
+<style>
+/* ===== SECTION ===== */
+.full-image-section {
+  padding: 80px 0 40px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== TITLE ===== */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* ===== SCHOOL GRID (DESKTOP) ===== */
+.school-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 180px 320px;
+  gap: 22px;
+  grid-template-areas:
+    "img1 img2 img3"
+    "img1 img4 img4";
+}
+
+.school-grid .img-1 { grid-area: img1; }
+.school-grid .img-2 { grid-area: img2; }
+.school-grid .img-3 { grid-area: img3; }
+.school-grid .img-4 { grid-area: img4; }
+
+.school-grid .img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.school-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 900px) {
+  .school-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: none;
+  }
+
+  .school-grid .img {
+    height: 220px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+}
+</style>
+
 
 <!-- ===== TREND HERO SECTION ===== -->
 <section class="trend-hero">
   <div class="trend-container">
 
-    <div class="section-title"> <h2>Sports Wear</h2> <p>Explore bold styles crafted for modern fashion</p> </div>
+    <div class="section-title"> <h2>Sports Wear</h2> </div>
 
     <div class="trend-images">
 
       <div class="img small">
-        <img src="https://picsum.photos/300/450?1" alt="Trend 1">
+        <img src="/images/shop/Sportswear1.png" alt="Trend 1">
       </div>
 
       <div class="img tall">
-        <img src="https://picsum.photos/380/560?2" alt="Trend 2">
+        <img src="/images/shop/Sportswear2.png" alt="Trend 2">
       </div>
 
       <div class="img focus">
-        <img src="https://picsum.photos/420/580?3" alt="Trend 3">
+        <img src="/images/shop/Sportswear3.png" alt="Trend 3">
         <!-- <button class="trend-btn">Explore Collections ↗</button> -->
       </div>
 
       <div class="img tall">
-        <img src="https://picsum.photos/380/560?4" alt="Trend 4">
+        <img src="/images/shop/Sportswear4.png" alt="Trend 4">
       </div>
 
       <div class="img small">
-        <img src="https://picsum.photos/300/450?5" alt="Trend 5">
+        <img src="/images/shop/Sportswear5.png" alt="Trend 5">
       </div>
 
     </div>
@@ -125,23 +224,23 @@ fetch("header.html")
     <div class="image-grid">
 
       <div class="img-box big">
-        <img src="images/portfolio-img25.png" alt="Boys Uniform">
+        <img src="/images/shop/industrieswear1.png" alt="Boys Uniform">
         <!-- <div class="img-text">Boys Uniform</div> -->
       </div>
 
       <div class="img-box big">
-        <img src="images/portfolio-img25.png" alt="Girls Uniform">
+        <img src="/images/shop/industrieswear3.png" alt="Girls Uniform">
         <!-- <div class="img-text">Girls Uniform</div> -->
       </div>
 
       <div class="right-stack">
         <div class="img-box">
-          <img src="images/portfolio-img25.png" alt="Shirts">
+          <img src="/images/shop/industrieswear2.png" alt="Shirts">
           <!-- <div class="img-text">Shirts</div> -->
         </div>
 
         <div class="img-box">
-          <img src="images/portfolio-img25.png" alt="Shorts">
+          <img src="/images/shop/industrieswear4.png" alt="Shorts">
           <!-- <div class="img-text">Shorts</div> -->
         </div>
       </div>
@@ -153,23 +252,23 @@ fetch("header.html")
 
 <!-- ===== GALLERY SECTION ===== -->
 <section class="gallery-section marka"> <div class="gallery-container"> <!-- Title -->   <div class="section-title"> <h2>Corporate Uniforms</h2> </div>
- <div class="gallery-grid"> <div class="gallery-item gallery-item--large"> <img src="https://picsum.photos/600/500?1"> </div> 
- <div class="gallery-item gallery-item--large"> <img src="https://picsum.photos/600/500?2"> </div>
-  <div class="gallery-item gallery-item--large"> <img src="https://picsum.photos/600/500?3"> </div> 
-  <div class="gallery-item gallery-item--small"> <img src="https://picsum.photos/600/300?4"> </div> 
-  <div class="gallery-item gallery-item--small"> <img src="https://picsum.photos/600/300?5"> </div> 
-  <div class="gallery-item gallery-item--small"> <img src="https://picsum.photos/600/300?6"> </div> </div> </div> </section>
+ <div class="gallery-grid"> <div class="gallery-item gallery-item--large"> <img src="/images/shop/Corporate.png"> </div> 
+ <div class="gallery-item gallery-item--large"> <img src="/images/shop/Corporate 2.png"> </div>
+  <div class="gallery-item gallery-item--large"> <img src="/images/shop/Corporate 3.png"> </div> 
+  <div class="gallery-item gallery-item--small"> <img src="/images/shop/Corporate 4.png"> </div> 
+  <div class="gallery-item gallery-item--small"> <img src="/images/shop/Corporate 5.jpg"> </div> 
+  <div class="gallery-item gallery-item--small"> <img src="/images/corporate-img-2.png"> </div> </div> </div> </section>
 
 <!-- ===== IMAGE ROW SECTION ===== -->
 <section class="image-section">
  <div class="section-title"> <h2>Fashion Wears</h2> </div>
 
   <div class="image-row">
-    <div class="image-box"><img src="https://picsum.photos/200/200?1" alt="Image 1"></div>
-    <div class="image-box"><img src="https://picsum.photos/200/200?2" alt="Image 2"></div>
-    <div class="image-box"><img src="https://picsum.photos/200/200?3" alt="Image 3"></div>
-    <div class="image-box"><img src="https://picsum.photos/200/200?4" alt="Image 4"></div>
-    <div class="image-box"><img src="https://picsum.photos/200/200?5" alt="Image 5"></div>
+    <div class="image-box"><img src="/images/shop/fashion.png" alt="Image 1"></div>
+    <div class="image-box"><img src="/images/shop/fashion. 2.png" alt="Image 2"></div>
+    <div class="image-box"><img src="/images/shop/fashion. 3.png" alt="Image 3"></div>
+    <div class="image-box"><img src="/images/shop/fashion4.jpg" alt="Image 4"></div>
+    <div class="image-box"><img src="images/122.jpg" alt="Image 5"></div>
   </div>
 </section>
 
